@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-size: 16px;
+   background-color: #a9c9ff;
+   background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+}
+
+.container {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.calculator {
+   border: solid 2px;
+   display: grid;
+   grid-template-columns: repeat(5, 75px);
+   grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+   align-content: center;
+   gap: 2px;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.single-space,
+.triple-space {
+   background-color: rgba(238, 249, 255, 0.7);
+}
+
+.triple-space {
+   grid-column: span 3;
+}
+
+.two-row {
+   grid-row: span 2;
+}
+
+.two-col {
+   grid-column: span 2;
+}
+
+.display {
+   grid-column: 1 / -1;
+   background-color: rgb(0, 0, 0, 0.8);
+   color: rgba(231, 231, 231, 0.9);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: space-around;
+   font-size: 1.8rem;
+   padding: 10px;
+   font-family: "Pathway Gothic One", sans-serif;
+}
+
+.prev-operand {
+   font-size: 1.3rem;
+   color: rgba(231, 231, 231, 0.75);
+}
+
+.prev-operand,
+.new-operand {
+   transition:  2s ease-out;
+}
+
+.calculator button {
+   background-color: rgba(238, 249, 255, 0.7);
+   border: solid 1px white;
+   font-size: 1.5rem;
+   font-family: "Pathway Gothic One", sans-serif;
+}
+
+.calculator button:hover {
+   cursor: pointer;
+   background-color: rgb(226, 245, 255);
+}
+
+.calculator button:focus {
+   outline: none;
+}
+
+.calculator .delete {
+   color: red;
+   font-weight: 800;
+}
+
+.calculator .clear {
+   font-weight: 800;
+}
